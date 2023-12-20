@@ -7,10 +7,13 @@ type DashboardLayoutProps = {
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
-    <main>
-      <Header />
+    <main className="mx-auto flex min-h-screen w-full max-w-[1600px]">
       <Sidebar />
-      {children}
+
+      <div className="w-full">
+        <Header />
+        {children}
+      </div>
     </main>
   )
 }
