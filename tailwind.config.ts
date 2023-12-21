@@ -6,11 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {
-    gridTemplateRows: {
-      app: 'min-content max-content',
-    },
-  },
+  theme: {},
   plugins: [],
 }
 export default config

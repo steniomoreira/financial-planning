@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Button } from './button'
 
 export function Sidebar() {
   return (
@@ -14,9 +15,9 @@ export function Sidebar() {
         />
         <span className="text-sm">Stenio Moreira</span>
 
-        <button className="px-3 py-1 text-xs border border-zinc-700 rounded-2xl transition hover:border-zinc-500">
-          Editar
-        </button>
+        <Button color="secondary" size="sm">
+          Profile
+        </Button>
       </Link>
     </aside>
   )
