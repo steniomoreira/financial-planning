@@ -2,7 +2,7 @@ import { ComponentProps, ReactNode } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const button = tv({
-  base: 'flex justify-center gap-1 font-bold text-zinc-900 rounded-xl transition duration-75',
+  base: 'flex justify-center gap-2 font-bold text-zinc-900 rounded-xl transition duration-75',
   variants: {
     color: {
       primary: 'bg-yellow-200 hover:bg-opacity-80',
@@ -24,9 +24,15 @@ type ButtonProps = ComponentProps<'button'> &
     children: ReactNode
   }
 
-export function Button({ color, size, children, ...props }: ButtonProps) {
+export function Button({
+  color,
+  size,
+  className,
+  children,
+  ...props
+}: ButtonProps) {
   return (
-    <button className={button({ color, size })} {...props}>
+    <button className={button({ color, size, className })} {...props}>
       {children}
     </button>
   )
