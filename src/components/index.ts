@@ -1,4 +1,5 @@
 export * from './header'
 export * from './sidebar'
-export * from './button'
+export * from './Button'
 export * from './card-box'
+export * from './Table'
