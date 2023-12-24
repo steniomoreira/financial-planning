@@ -1,13 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from './button'
+import { Button } from './Button'
 import {
   CircleDollarSign,
   CreditCard,
   LayoutDashboard,
   Settings,
-  Banknote,
 } from 'lucide-react'
+
+const navHover = 'hover:bg-zinc-800 hover:text-yellow-200'
+const navActive = 'bg-zinc-800 text-yellow-200'
 
 export function Sidebar() {
   return (
@@ -18,6 +20,7 @@ export function Sidebar() {
           src="https://github.com/steniomoreira.png"
           width={64}
           height={64}
+          priority
           alt=""
         />
 
@@ -25,7 +28,7 @@ export function Sidebar() {
       </Link>
 
       <Button color="secondary" size="sm">
-        Profile
+        Perfil
       </Button>
 
       <nav className="w-full mt-3">
@@ -33,8 +36,8 @@ export function Sidebar() {
           <li>
             <Link href="/">
               <Button
-                className="w-full border-0 justify-start gap-4 text-zinc-500 font-semibold hover:bg-zinc-800 hover:text-yellow-200"
-                color="secondary"
+                className={`w-full border-0 justify-start gap-4 font-semibold ${navHover} ${navActive}`}
+                color="primary"
               >
                 <LayoutDashboard className="text-zinc-300" size={15} />
                 Dashboard
@@ -42,32 +45,21 @@ export function Sidebar() {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/transacao">
               <Button
-                className="w-full border-0 justify-start gap-4 text-zinc-500 font-semibold hover:bg-zinc-800 hover:text-yellow-200"
-                color="secondary"
+                className={`w-full border-0 justify-start gap-4 text-zinc-500 bg-transparent font-semibold ${navHover}`}
+                color="primary"
               >
-                <CircleDollarSign className="text-zinc-300" size={15} />{' '}
-                Receitas
+                <CircleDollarSign className="text-zinc-300" size={15} />
+                Transação
               </Button>
             </Link>
           </li>
           <li>
             <Link href="/">
               <Button
-                className="w-full border-0 justify-start gap-4 text-zinc-500 font-semibold hover:bg-zinc-800 hover:text-yellow-200"
-                color="secondary"
-              >
-                <Banknote className="text-zinc-300" size={15} />
-                Despesas
-              </Button>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <Button
-                className="w-full border-0 justify-start gap-4 text-zinc-500 font-semibold hover:bg-zinc-800 hover:text-yellow-200"
-                color="secondary"
+                className={`w-full border-0 justify-start gap-4 text-zinc-500 bg-transparent font-semibold ${navHover}`}
+                color="primary"
               >
                 <CreditCard className="text-zinc-300" size={15} />
                 Cartão de Crédito
@@ -77,8 +69,8 @@ export function Sidebar() {
           <li>
             <Link href="/">
               <Button
-                className="w-full border-0 justify-start gap-4 text-zinc-500 font-semibold hover:bg-zinc-800 hover:text-yellow-200"
-                color="secondary"
+                className={`w-full border-0 justify-start gap-4 text-zinc-500 bg-transparent font-semibold ${navHover}`}
+                color="primary"
               >
                 <Settings className="text-zinc-300" size={15} />
                 Configuração

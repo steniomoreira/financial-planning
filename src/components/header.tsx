@@ -1,4 +1,4 @@
-import { Button } from './button'
+import { Button } from './Button'
 import { Bell, Plus } from 'lucide-react'
 
 export function Header() {
@@ -7,7 +7,8 @@ export function Header() {
       <span>Dashboard</span>
       <span className="flex justify-center gap-3">
         <Button>
-          <Plus size={15} /> Account
+          <Plus size={15} />
+          Adicionar conta
         </Button>
         <Button color="secondary">
           <Bell size={15} />
