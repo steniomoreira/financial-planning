@@ -26,7 +26,7 @@ export default function Transaction() {
         <Table />
 
         <div className="p-4 mt-10 flex justify-between items-end bg-zinc-800 rounded">
-          <ul className="flex gap-4">
+          <ul className="w-full flex gap-4">
             <li className="flex flex-col gap-1">
               <span className="text-xs flex gap-1">
                 <span className="w-4 h-4 text-[10px] flex justify-center items-center text-zinc-800 bg-blue-400 rounded-full right-0">
@@ -54,11 +54,11 @@ export default function Transaction() {
               </span>
               <span className="text-sm text-red-400">R$ 50000.00</span>
             </li>
+            <li className="flex flex-1 justify-end items-end gap-2">
+              <span className="text-xs">Total</span>
+              <span className="text-sm text-green-400">R$ 50000.00</span>
+            </li>
           </ul>
-
-          <p className="text-xs">
-            Total: <span className="text-lg text-green-400">R$ 6000.00</span>
-          </p>
         </div>
       </CardBox>
     </div>
