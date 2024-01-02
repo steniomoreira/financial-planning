@@ -13,7 +13,7 @@ export const ButtonTv = tv({
     },
     size: {
       sm: 'px-3 py-1 text-[10px] font-normal rounded-2xl',
-      md: 'py-3 px-3 text-xs',
+      md: 'py-3 px-3 text-sm',
     },
   },
   defaultVariants: {
