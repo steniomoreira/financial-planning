@@ -1,5 +1,6 @@
 export * from './header'
-export * from './sidebar'
+export * from './Sidebar/components/NavLink'
+export * from './Sidebar'
 export * from './Button'
 export * from './card-box'
 export * from './Table'
