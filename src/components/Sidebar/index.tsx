@@ -26,11 +26,11 @@ export function Sidebar() {
 
       <nav className="w-full mt-3">
         <NavLink to="/">
-          <LayoutDashboard className="text-zinc-300" size={15} />
+          <LayoutDashboard className="text-zinc-300" size={18} />
           Dashboard
         </NavLink>
         <NavLink to="/transacao">
-          <CircleDollarSign className="text-zinc-300" size={15} />
+          <CircleDollarSign className="text-zinc-300" size={18} />
           Transação
         </NavLink>
       </nav>

@@ -1,4 +1,3 @@
-import { Button } from '@/components'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
@@ -7,17 +6,13 @@ type NavLinkProps = {
   children: ReactNode
 }
 
-const navHover = 'hover:bg-zinc-800 hover:text-yellow-200'
+const navLinkHover = 'hover:bg-zinc-800 hover:text-yellow-200'
+const navLinkBase = `w-full py-3 px-3 text-md flex justify-start items-center gap-4 text-zinc-500 bg-transparent font-semibold rounded-xl transition duration-75 ${navLinkHover}`
 
 export function NavLink({ to, children }: NavLinkProps) {
   return (
-    <Link href={to}>
-      <Button
-        className={`w-full border-0 justify-start gap-4 text-zinc-500 bg-transparent font-semibold ${navHover}`}
-        color="primary"
-      >
-        {children}
-      </Button>
+    <Link href={to} className={navLinkBase}>
+      {children}
     </Link>
   )
 }
