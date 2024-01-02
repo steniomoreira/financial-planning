@@ -1,18 +1,18 @@
-import Link from 'next/link'
 import { ReactNode } from 'react'
+import { ActiveLink } from './ActiveLink'
 
 type NavLinkProps = {
   to: string
   children: ReactNode
 }
 
-const navLinkHover = 'hover:bg-zinc-800 hover:text-yellow-200'
-const navLinkBase = `w-full py-3 px-3 text-md flex justify-start items-center gap-4 text-zinc-500 bg-transparent font-semibold rounded-xl transition duration-75 ${navLinkHover}`
-
 export function NavLink({ to, children }: NavLinkProps) {
   return (
-    <Link href={to} className={navLinkBase}>
+    <ActiveLink
+      href={to}
+      className="p-3 text-md flex justify-start items-center gap-4 font-semibold rounded-xl transition duration-75 hover:bg-zinc-800"
+    >
       {children}
-    </Link>
+    </ActiveLink>
   )
 }
