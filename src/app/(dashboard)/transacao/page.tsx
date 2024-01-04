@@ -1,6 +1,6 @@
-import { CardBox, Table } from '@/components'
+import { CardBox } from '@/components'
 import { MoreHorizontal } from 'lucide-react'
-import { HeaderTransactions } from './components'
+import { HeaderTransactions, TableTransactions } from './components'
 
 export default function Transaction() {
   return (
@@ -9,12 +9,12 @@ export default function Transaction() {
 
       <CardBox>
         <div className="pt-4 pb-4 flex justify-between">
-          <h1 className="text-2xl">Janeiro/2024</h1>
+          <h2 className="text-2xl">Janeiro/2024</h2>
 
           <MoreHorizontal size={24} />
         </div>
 
-        <Table />
+        <TableTransactions />
       </CardBox>
     </div>
   )

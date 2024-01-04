@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../Button'
-import { NavLink } from '../Sidebar/components/NavLink'
+import { NavLink } from './components/NavLink'
 import { CircleDollarSign, LayoutDashboard } from 'lucide-react'
 
 export function Sidebar() {
